@@ -5,6 +5,8 @@ import HeroSection from "@/components/HeroSection";
 import GalleryCard from "@/components/GalleryCard";
 import PasswordModal from "@/components/PasswordModal";
 import Footer from "@/components/Footer";
+import VideoSection from "@/components/VideoSection";
+import TopPicksSection from "@/components/TopPicksSection";
 
 const EVENTS = [
   {
@@ -40,7 +42,9 @@ export default function Home() {
     <main className="flex-1 w-full">
       <HeroSection />
 
-      <section className="py-24 px-6 relative z-10 bg-navy-950">
+      <TopPicksSection />
+
+      <section className="py-24 px-6 relative z-30 bg-navy-950 border-t border-white/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
@@ -67,6 +71,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <VideoSection />
 
       <Footer />
 
