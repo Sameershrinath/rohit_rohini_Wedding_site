@@ -6,7 +6,7 @@ import { Images } from "lucide-react";
 interface GalleryCardProps {
   title: string;
   date: string;
-  count: number;
+  count: string;
   description: string;
   image: string;
   onClick: () => void;
@@ -24,7 +24,7 @@ export default function GalleryCard({ title, date, count, description, image, on
       className="group relative cursor-pointer overflow-hidden rounded-2xl glass aspect-[4/5] sm:aspect-square md:aspect-[3/4] flex flex-col justify-end p-6 border border-white/10 shadow-2xl transition-all duration-500 hover:border-gold-500/50 hover:shadow-gold-500/20"
     >
       {/* Background Image with Zoom Effect */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
         style={{ backgroundImage: `url('${image}')` }}
       />
@@ -49,7 +49,7 @@ export default function GalleryCard({ title, date, count, description, image, on
         <p className="text-slate-300 font-light text-sm line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
           {description}
         </p>
-        
+
         {/* Animated indicator */}
         <div className="w-0 h-[2px] bg-gold-400 mt-4 group-hover:w-full transition-all duration-500 ease-out" />
       </div>

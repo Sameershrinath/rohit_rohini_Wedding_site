@@ -11,21 +11,29 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center">
-      {/* Background Image */}
+    <section className="relative h-screen w-full flex flex-col items-center justify-center">
+      {/* Background Image (Mobile) */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{
+          backgroundImage: "url('/images/engagement.JPG')",
+        }}
+      />
+
+      {/* Background Image (Desktop) */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{
           backgroundImage: "url('/images/hero.JPG')",
         }}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 z-10 bg-navy-950/70 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
+      <div className="fixed inset-0 z-10 bg-navy-950/70 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
 
       {/* Floating Particles (Client Side Only) */}
       {mounted && (
-        <div className="absolute inset-0 z-20 pointer-events-none">
+        <div className="fixed inset-0 z-20 pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}

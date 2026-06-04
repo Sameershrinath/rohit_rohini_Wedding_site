@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-navy-950 py-12 relative overflow-hidden">
+    <footer className="w-full border-t border-white/10 bg-navy-950 py-12 relative z-30 overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
       

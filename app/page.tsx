@@ -9,39 +9,38 @@ import Footer from "@/components/Footer";
 const EVENTS = [
   {
     id: "haldi",
-    title: "Haldi Ceremony",
-    date: "October 10, 2024",
-    count: 142,
+    title: "Engagement & Reception",
+    date: "Jan - 2026",
+    count: "700+",
     description: "A vibrant morning filled with yellow hues, laughter, and traditional blessings.",
     image: "/images/engagement.JPG",
   },
   {
     id: "wedding",
     title: "Wedding Ceremony",
-    date: "October 11, 2024",
-    count: 350,
+    date: "March 2026",
+    count: "1000+",
     description: "The beautiful moment we tied the knot surrounded by our loved ones.",
     image: "/images/marriage.JPG",
   },
   {
     id: "reception",
-    title: "Grand Reception",
-    date: "October 12, 2024",
-    count: 215,
+    title: "Haldi & Wedding",
+    date: "March 2026",
+    count: "300+",
     description: "An evening of dining, dancing, and celebrating our new beginning.",
     image: "/images/reception.JPG",
   },
 ];
-
 export default function Home() {
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
   const selectedEvent = EVENTS.find((e) => e.id === selectedEventId) || null;
 
   return (
-    <main className="flex-1 w-full bg-navy-950">
+    <main className="flex-1 w-full">
       <HeroSection />
 
-      <section className="py-24 px-6 relative z-10">
+      <section className="py-24 px-6 relative z-10 bg-navy-950">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
